@@ -4,13 +4,20 @@ public class JuegoMain {
 
 	public static void main(String[] args) {
 		Laberinto lab;
+		FactoryMethod fm = new FactoryMethod();
 		JuegoLaberinto juego = new JuegoLaberinto();
 		
-		//lab=juego.crearLaberintoWired();
-		//lab=juego.crearLaberinto();
+		
+		//lab=fm.crearLaberintoWired();
+		//lab=fm.crearLaberinto();
 		
 		juego=new JuegoLaberintoBomba();
-		lab=juego.crearLaberinto();
+		
+		//lab=fm.crearLaberinto();
+		
+		lab=fm.crearLaberintoOrientaciones();
+		
+		juego.asignarLaberinto(lab);
 		
 		System.out.println("Numero de habitaciones: "+lab.habitaciones.size());
 	}
