@@ -1,7 +1,7 @@
 package laberinto;
 
-public class OrientacionSur extends Orientacion {
+public class OrientacionEste extends Orientacion {
 	void ponerElementoEn(Habitacion hab,ElementoMapa elto){
-		hab.setSur(elto);
+		hab.setEste(elto);
 	}
 }
