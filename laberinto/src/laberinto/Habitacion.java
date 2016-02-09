@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Habitacion extends ElementoMapa {
-	int numeroHabitacion;
+	private int numeroHabitacion;
 	private ElementoMapa norte,sur,este,oeste;
 	List<Orientacion> orientaciones=new ArrayList<>();
 	List<ElementoMapa> lados=new ArrayList<>();
@@ -16,10 +16,14 @@ public class Habitacion extends ElementoMapa {
 		orientaciones.add(new OrientacionOeste());
 	}
 	public Habitacion(int num){
-		numeroHabitacion=num;
+		this.numeroHabitacion=num;
 		for(int i=0;i<4;i++)
 			lados.add(new Pared());
 		iniOrientaciones();
+	}
+	
+	public int getNumeroHabitacion(){
+		return this.numeroHabitacion;
 	}
 	
 	public List<Orientacion> getOrientaciones(){

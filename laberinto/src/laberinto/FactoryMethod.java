@@ -46,16 +46,23 @@ public class FactoryMethod {
 		Puerta puerta=fabricarPuerta(h1,h2);
 		
 		h1.ponerElementoEn(puerta, new OrientacionNorte());
+		h1.ponerElementoEn(fabricarPared(), new OrientacionEste());
+		h1.ponerElementoEn(fabricarPared(), new OrientacionSur());
+		h1.ponerElementoEn(fabricarPared(), new OrientacionOeste());		
 		//h1.agregarLado(0,puerta);
-		h1.agregarLado(1, fabricarPared());
-		h1.agregarLado(2, fabricarPared());
-		h1.agregarLado(3,fabricarPared());
+		//h1.agregarLado(1, fabricarPared());
+		//h1.agregarLado(2, fabricarPared());
+		//h1.agregarLado(3,fabricarPared());
 		
-		h2.agregarLado(2,puerta);
-		h2.agregarLado(1, fabricarPared());
+		h2.ponerElementoEn(puerta, new OrientacionSur());
 		h2.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		h2.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		h2.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		//h2.agregarLado(2,puerta);
+		//h2.agregarLado(1, fabricarPared());
+		//h2.ponerElementoEn(fabricarPared(), new OrientacionNorte());
 		//h2.agregarLado(0, fabricarPared());
-		h2.agregarLado(3,fabricarPared());
+		//h2.agregarLado(3,fabricarPared());
 		
 		lab.agregarHabitacion(h1);
 		lab.agregarHabitacion(h2);

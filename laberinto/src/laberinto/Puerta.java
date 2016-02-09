@@ -12,9 +12,9 @@ public class Puerta extends ElementoMapa {
 	
 	public void entrar(){
 		if(abierta)
-			System.out.println("La puerta está abierta");
+			System.out.println("La puerta esta abierta");
 		else
-			System.out.println("La puerta está cerrada");
+			System.out.println("La puerta esta cerrada");
 	}
 
 }
