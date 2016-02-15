@@ -4,8 +4,11 @@ public class JuegoLaberinto {
 
 	Laberinto lab;
 	
-	void asignarLaberinto(Laberinto lab){
+	public void asignarLaberinto(Laberinto lab){
 		this.lab=lab;
 	}
-	
+	public Laberinto getLaberinto(){
+		return this.lab;
+	}
+
 }

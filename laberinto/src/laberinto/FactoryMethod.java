@@ -38,7 +38,7 @@ public class FactoryMethod {
 		return lab;
 	}
 	
-	Laberinto crearLaberintoOrientaciones(){
+	public Laberinto crearLaberintoOrientaciones(){
 		Laberinto lab = fabricarLaberinto();
 		Habitacion h1= fabricarHabitacion(1);
 		Habitacion h2= fabricarHabitacion(2);

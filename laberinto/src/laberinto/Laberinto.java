@@ -20,5 +20,7 @@ public class Laberinto {
 		}
 		return null;
 	}
-	
+	public List<Habitacion> getHabitaciones(){
+		return this.habitaciones;
+	}
 }
