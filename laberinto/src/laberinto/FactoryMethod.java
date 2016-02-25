@@ -78,6 +78,8 @@ public class FactoryMethod {
 		
 		lab.agregarHabitacion(h1);
 		lab.agregarHabitacion(h2);
+		lab.agregarHabitacion(h3);
+		lab.agregarHabitacion(h4);
 		return lab;
 	}
 	
