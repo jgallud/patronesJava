@@ -32,10 +32,11 @@ public class JuegoMain {
 		
 		bicho.setEstrategia(new EstrategiaSentidoReloj());
 		
-		bicho.accion();
-		bicho.accion();
-		bicho.accion();
-		bicho.accion();
+		(new Thread(bicho)).start();
+		//bicho.accion();
+		//bicho.accion();
+		//bicho.accion();
+		//bicho.accion();
 		
 		
 	}
