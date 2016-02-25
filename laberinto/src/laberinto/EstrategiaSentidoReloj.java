@@ -3,7 +3,7 @@ package laberinto;
 import java.util.List;
 
 public class EstrategiaSentidoReloj extends Estrategia {
-	private Bicho bicho;
+	private EnteAutonomo bicho;
 	private int actual;
 	EstrategiaSentidoReloj(){
 		this.actual=0;
@@ -13,7 +13,7 @@ public class EstrategiaSentidoReloj extends Estrategia {
 		this.actual=(this.actual+1)%orientaciones.size();
 		return orientaciones.get(this.actual);
 	}
-	void accion(Bicho bicho){
+	void accion(EnteAutonomo bicho){
 		this.bicho=bicho;
 		Orientacion or=siguiente();
 		or.entrar(bicho);

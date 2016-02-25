@@ -3,7 +3,7 @@ package laberinto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Habitacion extends ElementoMapa {
+public class Habitacion extends Contenedor {
 	private int numeroHabitacion;
 	private ElementoMapa norte,sur,este,oeste;
 	List<Orientacion> orientaciones=new ArrayList<>();

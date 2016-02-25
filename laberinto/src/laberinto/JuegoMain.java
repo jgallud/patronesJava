@@ -18,8 +18,9 @@ public class JuegoMain {
 		
 		//lab=fm.crearLaberinto();
 		
-		lab=fm.crearLaberintoOrientaciones();
+		//lab=fm.crearLaberintoOrientaciones();
 		
+		lab=fm.crearLaberintoComposite();
 		juego.asignarLaberinto(lab);
 		
 		System.out.println("Numero de habitaciones: "+lab.habitaciones.size());

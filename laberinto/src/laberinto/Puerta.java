@@ -1,6 +1,6 @@
 package laberinto;
 
-public class Puerta extends ElementoMapa {
+public class Puerta extends Hoja {
 	Habitacion hab1,hab2;
 	Boolean abierta;
 	
@@ -16,5 +16,10 @@ public class Puerta extends ElementoMapa {
 		else
 			System.out.println("La puerta esta cerrada");
 	}
-
+	public void entrar(EnteAutonomo ea){
+		if(abierta)
+			System.out.println("La puerta esta abierta");
+		else
+			System.out.println("La puerta esta cerrada");
+	}
 }

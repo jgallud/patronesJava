@@ -38,6 +38,49 @@ public class FactoryMethod {
 		return lab;
 	}
 	
+	public Laberinto crearLaberintoComposite(){
+		Laberinto lab = fabricarLaberinto();
+		Habitacion h1= fabricarHabitacion(1);
+		Habitacion h2= fabricarHabitacion(2);
+		Habitacion h3=fabricarHabitacion(3);
+		Habitacion h4=fabricarHabitacion(4);
+		Armario armario=new Armario();
+		
+		Puerta puerta12=fabricarPuerta(h1,h2);
+		Puerta puerta34=fabricarPuerta(h3,h4);
+		Puerta puerta13=fabricarPuerta(h1,h3);
+		Puerta puerta24=fabricarPuerta(h2,h4);
+		
+		h1.ponerElementoEn(puerta12, new OrientacionNorte());
+		h1.ponerElementoEn(puerta13, new OrientacionEste());
+		h1.ponerElementoEn(fabricarPared(), new OrientacionSur());
+		h1.ponerElementoEn(fabricarPared(), new OrientacionOeste());		
+		
+		h2.ponerElementoEn(puerta12, new OrientacionSur());
+		h2.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		h2.ponerElementoEn(puerta24, new OrientacionEste());
+		h2.ponerElementoEn(fabricarPared(), new OrientacionOeste());
+		
+		h3.ponerElementoEn(puerta34, new OrientacionNorte());
+		h3.ponerElementoEn(puerta13, new OrientacionOeste());
+		h3.ponerElementoEn(fabricarPared(), new OrientacionSur());
+		h3.ponerElementoEn(fabricarPared(), new OrientacionEste());		
+		
+		h4.ponerElementoEn(puerta34, new OrientacionSur());
+		h4.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		h4.ponerElementoEn(puerta24, new OrientacionOeste());
+		h4.ponerElementoEn(fabricarPared(), new OrientacionEste());
+		
+		armario.agregarHijo(new Bomba());
+		h2.agregarHijo(armario);
+		h1.agregarHijo(new Bomba());
+		h4.agregarHijo(new Bomba());
+		
+		lab.agregarHabitacion(h1);
+		lab.agregarHabitacion(h2);
+		return lab;
+	}
+	
 	public Laberinto crearLaberintoOrientaciones(){
 		Laberinto lab = fabricarLaberinto();
 		Habitacion h1= fabricarHabitacion(1);
