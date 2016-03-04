@@ -30,12 +30,12 @@ public class Habitacion extends Contenedor {
 		return orientaciones;
 	}
 	
-	void agregarLado(int num,ElementoMapa em){
+	public void agregarLado(int num,ElementoMapa em){
 		lados.remove(num);
 		lados.add(num,em);
 	}
 	
-	void ponerElementoEn(ElementoMapa elto,Orientacion or){
+	public void ponerElementoEn(ElementoMapa elto,Orientacion or){
 		or.ponerElementoEn(this, elto);
 	}
 	public ElementoMapa getNorte() {

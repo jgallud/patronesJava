@@ -2,9 +2,12 @@ package laberintoTest;
 
 import laberinto.*;
 import org.junit.*;
+
+import factoryMethod.FactoryMethod;
+
 import static org.junit.Assert.*;
 
-public class LaberintoTest {
+public class LaberintoTestFM {
 		private JuegoLaberinto juego;
 		private Laberinto lab;
 		@Before
@@ -23,4 +26,5 @@ public class LaberintoTest {
 			lab=juego.getLaberinto();
 			assertEquals(lab.getHabitaciones().size(),2);
 		}
+		
 }

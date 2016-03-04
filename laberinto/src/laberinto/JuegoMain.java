@@ -1,5 +1,7 @@
 package laberinto;
 
+import factoryMethod.FactoryMethod;
+
 public class JuegoMain {
 
 	public static void main(String[] args) {
@@ -25,7 +27,7 @@ public class JuegoMain {
 		
 		System.out.println("Numero de habitaciones: "+lab.habitaciones.size());
 		
-		hab=lab.obtenerHabitacion(1);
+		hab=lab.obtenerHabitacion(3);
 		
 		bicho=new Bicho();
 		bicho.colocarEn(hab);

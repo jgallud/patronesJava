@@ -6,7 +6,7 @@ import java.util.List;
 public class Laberinto {
 	List<Habitacion> habitaciones=new ArrayList<>();
 	
-	void agregarHabitacion(Habitacion hab){
+	public void agregarHabitacion(Habitacion hab){
 		habitaciones.add(hab);
 	}
 	

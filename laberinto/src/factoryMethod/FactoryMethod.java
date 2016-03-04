@@ -1,4 +1,6 @@
-package laberinto;
+package factoryMethod;
+
+import laberinto.*;
 
 public class FactoryMethod {
 	Laberinto crearLaberintoWired(){
@@ -51,23 +53,23 @@ public class FactoryMethod {
 		Puerta puerta13=fabricarPuerta(h1,h3);
 		Puerta puerta24=fabricarPuerta(h2,h4);
 		
-		h1.ponerElementoEn(puerta12, new OrientacionNorte());
+		h1.ponerElementoEn(puerta12, OrientacionNorte.norte());
 		h1.ponerElementoEn(puerta13, new OrientacionEste());
 		h1.ponerElementoEn(fabricarPared(), new OrientacionSur());
 		h1.ponerElementoEn(fabricarPared(), new OrientacionOeste());		
 		
 		h2.ponerElementoEn(puerta12, new OrientacionSur());
-		h2.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		h2.ponerElementoEn(fabricarPared(), OrientacionNorte.norte());
 		h2.ponerElementoEn(puerta24, new OrientacionEste());
 		h2.ponerElementoEn(fabricarPared(), new OrientacionOeste());
 		
-		h3.ponerElementoEn(puerta34, new OrientacionNorte());
+		h3.ponerElementoEn(puerta34, OrientacionNorte.norte());
 		h3.ponerElementoEn(puerta13, new OrientacionOeste());
 		h3.ponerElementoEn(fabricarPared(), new OrientacionSur());
 		h3.ponerElementoEn(fabricarPared(), new OrientacionEste());		
 		
 		h4.ponerElementoEn(puerta34, new OrientacionSur());
-		h4.ponerElementoEn(fabricarPared(), new OrientacionNorte());
+		h4.ponerElementoEn(fabricarPared(), OrientacionNorte.norte());
 		h4.ponerElementoEn(puerta24, new OrientacionOeste());
 		h4.ponerElementoEn(fabricarPared(), new OrientacionEste());
 		
