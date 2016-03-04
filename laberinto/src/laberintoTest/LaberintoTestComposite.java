@@ -29,10 +29,26 @@ public class LaberintoTestComposite {
 		lab=juego.getLaberinto();
 		Habitacion hab=lab.obtenerHabitacion(2);
 		assertEquals(hab.getHijos().size(),1);
-		ElementoMapa elto=hab.getHijos().get(0);
-		
+		ElementoMapa elto=hab.getHijos().get(0);	
 		assertEquals(elto.getClass(),Armario.class);
 	 }
-			
+		
+	@Test
+	public void testBombas(){
+		lab=juego.getLaberinto();
+		Habitacion hab=lab.obtenerHabitacion(2);
+		assertEquals(hab.getHijos().size(),1);
+		Contenedor elto=(Contenedor)hab.getHijos().get(0);
+		assertEquals(elto.getClass(),Armario.class);
+		ElementoMapa bm= elto.getHijos().get(0);
+		assertEquals(bm.getClass(),Bomba.class);
+		hab=lab.obtenerHabitacion(1);
+		bm= hab.getHijos().get(0);
+		assertEquals(bm.getClass(),Bomba.class);
+		hab=lab.obtenerHabitacion(4);
+		bm= elto.getHijos().get(0);
+		assertEquals(bm.getClass(),Bomba.class);
+		
+	 }
 }
 
