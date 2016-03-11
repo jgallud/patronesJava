@@ -1,6 +1,13 @@
 package laberinto;
 
 public class OrientacionSur extends Orientacion {
+	private static OrientacionSur miSur;	
+	public static OrientacionSur sur(){
+		if (miSur==null){
+			miSur=new OrientacionSur();
+		}
+		return miSur;
+	}
 	void ponerElementoEn(Habitacion hab,ElementoMapa elto){
 		hab.setSur(elto);
 	}

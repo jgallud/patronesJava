@@ -1,6 +1,13 @@
 package laberinto;
 
 public class OrientacionOeste extends Orientacion {
+	private static OrientacionOeste miOeste;	
+	public static OrientacionOeste oeste(){
+		if (miOeste==null){
+			miOeste=new OrientacionOeste();
+		}
+		return miOeste;
+	}
 	void ponerElementoEn(Habitacion hab,ElementoMapa elto){
 		hab.setOeste(elto);
 	}

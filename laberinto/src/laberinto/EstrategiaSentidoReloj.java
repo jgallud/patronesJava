@@ -3,7 +3,7 @@ package laberinto;
 public class EstrategiaSentidoReloj extends Estrategia {
 	//private EnteAutonomo bicho;
 	private int actual;
-	EstrategiaSentidoReloj(){
+	public EstrategiaSentidoReloj(){
 		this.actual=0;
 	}
 	Orientacion siguiente(){
