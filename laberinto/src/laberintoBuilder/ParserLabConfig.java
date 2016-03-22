@@ -17,8 +17,11 @@ public class ParserLabConfig {
 	private JSONParser parser=new JSONParser();
 	private JSONObject dic;
 	private LaberintoBuilderAC bldr;
-	public JuegoLaberinto obtenerLaberinto(){
+	public JuegoLaberinto obtenerJuego(){
 		return bldr.obtenerJuego();
+	}
+	public Laberinto obtenerLaberinto(){
+		return bldr.obtenerLaberinto();
 	}
 	
 	public void leerArchivo(String nombre){
@@ -59,29 +62,43 @@ public class ParserLabConfig {
 	    {
 	      crearLaberintoRecursivo((JSONObject)elemento,null);
 	    }
+	    JSONArray puertas = (JSONArray) dic.get("puertas");
+		if (puertas!=null){
+		    for (Object elemento : puertas)
+		    {
+		    	JSONArray parametros=(JSONArray) elemento;
+		    	long num1=(long) parametros.get(0);
+		    	String or1=(String) parametros.get(1);
+		    	long num2=(long) parametros.get(2);
+		    	String or2=(String) parametros.get(3);
+		    	bldr.fabricarPuerta(toIntExact(num1),or1,toIntExact(num2),or2);
+		    }
+		}   
 	}
 	
 	public void crearLaberintoRecursivo(JSONObject elemento, Contenedor padre){
 		Contenedor con=null;
-		if (((String) elemento.get("em")).indexOf("contenedor")!=-1){
-			if (((String) elemento.get("tipo")).indexOf("habitacion")!=-1){
+		
+		if (((String) elemento.get("tipo")).indexOf("habitacion")!=-1){
 				con=bldr.construirHabitacion();
 			}
-			if (((String) elemento.get("tipo")).indexOf("armario")!=-1){
+		if (((String) elemento.get("tipo")).indexOf("armario")!=-1){
 				con=bldr.construirArmario(padre);
 			}
-			JSONArray lista = (JSONArray) dic.get("hijos");
-			if (lista!=null){
-			    for (Object elemento2 : lista)
-			    {
-			      crearLaberintoRecursivo((JSONObject)elemento2,con);
-			    }
-			}
+		
+		if (((String) elemento.get("tipo")).indexOf("hole")!=-1){
+			String nombre=(String) elemento.get("config");
+			bldr.construirBlackHole(padre,nombre);
 		}
-		if (((String) elemento.get("em")).indexOf("hoja")!=-1){
-			if (((String) elemento.get("tipo")).indexOf("bomba")!=-1){
-				bldr.construirBomba(padre);
-			}
+		if (((String) elemento.get("tipo")).indexOf("bomba")!=-1){
+			bldr.construirBomba(padre);
+		}
+		JSONArray lista = (JSONArray) elemento.get("hijos");
+		if (lista!=null){
+		    for (Object elemento2 : lista)
+		    {
+		      crearLaberintoRecursivo((JSONObject)elemento2,con);
+		    }
 		}
 	}
 	

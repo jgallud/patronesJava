@@ -11,7 +11,7 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 	private JuegoLaberinto juego;
 	private Dictionary<String,Orientacion> orientaciones=new Hashtable<String,Orientacion>();
 
-	public Laberinto getLaberinto() {
+	public Laberinto obtenerLaberinto() {
 		return laberinto;
 	}
 	public void setLaberinto(Laberinto laberinto) {
@@ -22,9 +22,6 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 	}
 	public void setJuego(JuegoLaberinto juego) {
 		this.juego = juego;
-	}
-	public JuegoLaberinto obtenerJuego(){
-		return juego;
 	}
 	public Pared construirPared(){return new Pared();}
 	public Armario construirArmario(Contenedor con){
@@ -46,6 +43,11 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 		Bomba bomba=new Bomba();
 		con.agregarHijo(bomba);
 	}
+	public void construirBlackHole(Contenedor con, String filename){
+		BlackHole hole=new BlackHole();
+		hole.setFilename(filename);
+		con.agregarHijo(hole);
+	}
 	public Habitacion construirHabitacion(){
 		int num=laberinto.getHabitaciones().size();
 		Habitacion hab=new Habitacion(num);
@@ -58,10 +60,10 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 		return hab;
 	}
 	public void iniOrientaciones(){
-		orientaciones.put("norte",OrientacionNorte.norte());
-		orientaciones.put("este",OrientacionEste.este());
-		orientaciones.put("sur",OrientacionSur.sur());
-		orientaciones.put("oeste",OrientacionOeste.oeste());
+		orientaciones.put("OrNorte",OrientacionNorte.norte());
+		orientaciones.put("OrEste",OrientacionEste.este());
+		orientaciones.put("OrSur",OrientacionSur.sur());
+		orientaciones.put("OrOeste",OrientacionOeste.oeste());
 	}
 	public void construirJuego(){
 		juego=new JuegoLaberinto();

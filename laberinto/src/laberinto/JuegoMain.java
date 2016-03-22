@@ -10,6 +10,7 @@ public class JuegoMain {
 		Bicho bicho;
 		Habitacion hab;
 		JuegoLaberinto juego;
+		Personaje per;
 		
 		//FactoryMethod fm = new FactoryMethod();
 		//JuegoLaberinto juego = new JuegoLaberinto();
@@ -23,13 +24,20 @@ public class JuegoMain {
 		//juego.asignarLaberinto(lab);
 		
 		ParserLabConfig director = new ParserLabConfig();
-		director.procesar("/Users/jgallud/CloudStation/dev/builder/rectangulo4hab1arm3bomRec.json");
-		juego=director.obtenerLaberinto();
-		lab=juego.getLaberinto();
+		director.procesar("/Volumes/Macintosh HD/dev/laberinto2016/builder/rectangulo2habProxyRec2.json");
+		juego=director.obtenerJuego();
+		lab=director.obtenerLaberinto();
 		System.out.println("Numero de habitaciones: "+lab.getHabitaciones().size());
+		lab.listarElementos();
 		
-		hab=juego.getLaberinto().obtenerHabitacion(3);
+		hab=lab.obtenerHabitacion(1);
+		per=new Personaje();
+		//per.colocarEn(hab);
+		hab.entrar(per);
 		
+		ElementoMapa em= hab.getHijos().get(0);
+		em.entrar(per);
+		//lab.listarElementos();
 		//bicho=new Bicho();
 		//bicho.colocarEn(hab);
 		

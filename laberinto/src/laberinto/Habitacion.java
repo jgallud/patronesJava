@@ -65,5 +65,16 @@ public class Habitacion extends Contenedor {
 	public void entrar(){
 		System.out.println("Estas en la habitacion "+this.numeroHabitacion);
 	}
+	
+	public void entrar(EnteAutonomo ea){
+		System.out.println("Ente "+" esta en la habitacion "+this.numeroHabitacion);
+	}
+		
+	public void listarElementos() {
+		System.out.println("Elemento Habitación: ");
+		for(int i=0;i<hijos.size();i++){
+			hijos.get(i).listarElementos();
+		}
+	}
 
 }
