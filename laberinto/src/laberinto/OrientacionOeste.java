@@ -16,7 +16,7 @@ public class OrientacionOeste extends Orientacion {
 		ElementoMapa elto=hab.getOeste();
 		elto.entrar();
 	}
-	public void ponerElementoEn(Forma forma, ElementoMapa em) {
+	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
 		forma.setOeste(em);
 	}
 }

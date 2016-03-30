@@ -16,7 +16,10 @@ public class OrientacionSur extends Orientacion {
 		ElementoMapa elto=hab.getSur();
 		elto.entrar();
 	}
-	public void ponerElementoEn(Forma forma, ElementoMapa em) {
+	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
+		forma.setSur(em);
+	}
+	public void ponerElementoEnHexagono(Hexagonal forma, ElementoMapa em) {
 		forma.setSur(em);
 	}
 }

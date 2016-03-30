@@ -49,6 +49,9 @@ public class ParserLabConfig {
 		if (((String) dic.get("forma")).indexOf("rectangulo")!=-1){
 			bldr=new LaberintoNormalBuilder();
 		}
+		if (((String) dic.get("forma")).indexOf("hexagono")!=-1){
+			bldr=new LaberintoHexagonalBuilder();
+		}
 	}
 	public void crearJuego(){
 		bldr.construirJuego();

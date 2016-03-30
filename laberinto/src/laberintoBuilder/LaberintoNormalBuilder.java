@@ -7,9 +7,9 @@ import java.util.List;
 import laberinto.*;
 
 public class LaberintoNormalBuilder extends LaberintoBuilderAC {
-	private Laberinto laberinto;
+	protected Laberinto laberinto;
 	private JuegoLaberinto juego;
-	private Dictionary<String,Orientacion> orientaciones=new Hashtable<String,Orientacion>();
+	protected Dictionary<String,Orientacion> orientaciones=new Hashtable<String,Orientacion>();
 
 	public Laberinto obtenerLaberinto() {
 		return laberinto;

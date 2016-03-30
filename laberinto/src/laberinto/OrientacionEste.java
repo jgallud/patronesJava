@@ -17,7 +17,8 @@ public class OrientacionEste extends Orientacion {
 		elto.entrar();
 	}
 	
-	public void ponerElementoEn(Forma forma, ElementoMapa em) {
+	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
 		forma.setEste(em);
 	}
+	
 }

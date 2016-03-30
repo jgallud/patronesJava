@@ -12,5 +12,14 @@ public abstract class Orientacion {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void ponerElementoEnHexagono(Hexagonal forma, ElementoMapa em) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
