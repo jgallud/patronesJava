@@ -8,4 +8,9 @@ public abstract class Orientacion {
 		
 	}
 
+	public void ponerElementoEn(Forma forma, ElementoMapa em) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

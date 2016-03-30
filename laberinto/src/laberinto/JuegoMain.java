@@ -24,7 +24,9 @@ public class JuegoMain {
 		//juego.asignarLaberinto(lab);
 		
 		ParserLabConfig director = new ParserLabConfig();
-		director.procesar("/Volumes/Macintosh HD/dev/laberinto2016/builder/rectangulo2habProxyRec2.json");
+		//"/Volumes/Macintosh HD/dev/laberinto2016/builder/"
+		String ruta="/soft/smalltalk/laberinto16/builder/";
+		director.procesar(ruta+"rectangulo2habProxyRec2.json");
 		juego=director.obtenerJuego();
 		lab=director.obtenerLaberinto();
 		System.out.println("Numero de habitaciones: "+lab.getHabitaciones().size());

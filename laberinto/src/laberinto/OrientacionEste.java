@@ -16,4 +16,8 @@ public class OrientacionEste extends Orientacion {
 		ElementoMapa elto=hab.getEste();
 		elto.entrar();
 	}
+	
+	public void ponerElementoEn(Forma forma, ElementoMapa em) {
+		forma.setEste(em);
+	}
 }

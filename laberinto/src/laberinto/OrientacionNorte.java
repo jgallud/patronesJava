@@ -17,5 +17,7 @@ public class OrientacionNorte extends Orientacion {
 		ElementoMapa elto=hab.getNorte();
 		elto.entrar();
 	}
-
+	public void ponerElementoEn(Forma forma, ElementoMapa em) {
+		forma.setNorte(em);
+	}
 }

@@ -51,6 +51,7 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 	public Habitacion construirHabitacion(){
 		int num=laberinto.getHabitaciones().size();
 		Habitacion hab=new Habitacion(num);
+		hab.setForma(new Rectangular());
 		hab.ponerElementoEn(construirPared(), OrientacionNorte.norte());
 		hab.ponerElementoEn(construirPared(), OrientacionEste.este());
 		hab.ponerElementoEn(construirPared(), OrientacionSur.sur());

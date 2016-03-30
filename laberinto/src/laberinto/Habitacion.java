@@ -6,6 +6,7 @@ import java.util.List;
 public class Habitacion extends Contenedor {
 	private int numeroHabitacion;
 	private ElementoMapa norte,sur,este,oeste;
+	private Forma forma;
 	List<Orientacion> orientaciones=new ArrayList<>();
 	List<ElementoMapa> lados=new ArrayList<>();
 	
@@ -36,7 +37,8 @@ public class Habitacion extends Contenedor {
 	}
 	
 	public void ponerElementoEn(ElementoMapa elto,Orientacion or){
-		or.ponerElementoEn(this, elto);
+		//or.ponerElementoEn(this, elto);
+		forma.ponerEn(elto, or);
 	}
 	public ElementoMapa getNorte() {
 		return norte;
@@ -71,10 +73,16 @@ public class Habitacion extends Contenedor {
 	}
 		
 	public void listarElementos() {
-		System.out.println("Elemento Habitación: ");
+		System.out.println("Elemento Habitacion: ");
 		for(int i=0;i<hijos.size();i++){
 			hijos.get(i).listarElementos();
 		}
+	}
+	public Forma getForma() {
+		return forma;
+	}
+	public void setForma(Forma forma) {
+		this.forma = forma;
 	}
 
 }
