@@ -1,7 +1,12 @@
 package laberintoBuilder;
 
+import java.util.Dictionary;
+import java.util.List;
+import java.util.Map;
+
 import laberinto.Habitacion;
 import laberinto.Hexagonal;
+import laberinto.Orientacion;
 import laberinto.OrientacionEste;
 import laberinto.OrientacionNorEste;
 import laberinto.OrientacionNorOeste;
@@ -24,6 +29,13 @@ public class LaberintoHexagonalBuilder extends LaberintoNormalBuilder {
 		hab.ponerElementoEn(construirPared(), OrientacionSurEste.sureste());
 		hab.ponerElementoEn(construirPared(), OrientacionSurOeste.suroeste());
 		
+		List<Orientacion> lista=hab.getOrientaciones();
+		
+		for(Orientacion entrada: orientaciones.values()){
+			lista.add(entrada);
+		}
+		hab.setOrientaciones(lista);
+		
 		laberinto.agregarHabitacion(hab);
 		return hab;
 	}
@@ -32,7 +44,7 @@ public class LaberintoHexagonalBuilder extends LaberintoNormalBuilder {
 		orientaciones.put("OrNorEste",OrientacionNorEste.noreste());
 		orientaciones.put("OrSurEste",OrientacionSurEste.sureste());
 		orientaciones.put("OrSur",OrientacionSur.sur());
-		orientaciones.put("OrSuroeste",OrientacionSurOeste.suroeste());
+		orientaciones.put("OrSurOeste",OrientacionSurOeste.suroeste());
 		orientaciones.put("OrNorOeste",OrientacionNorOeste.noroeste());
 	}
 }

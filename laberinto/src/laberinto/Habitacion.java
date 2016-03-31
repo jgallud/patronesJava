@@ -31,6 +31,10 @@ public class Habitacion extends Contenedor {
 		return orientaciones;
 	}
 	
+	public void setOrientaciones(List<Orientacion> lista){
+		orientaciones=lista;
+	}
+	
 	public void agregarLado(int num,ElementoMapa em){
 		lados.remove(num);
 		lados.add(num,em);

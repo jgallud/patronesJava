@@ -9,7 +9,7 @@ import laberinto.*;
 public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 	protected Laberinto laberinto;
 	private JuegoLaberinto juego;
-	protected Dictionary<String,Orientacion> orientaciones=new Hashtable<String,Orientacion>();
+	protected Map<String,Orientacion> orientaciones=new HashMap<String,Orientacion>();
 
 	public Laberinto obtenerLaberinto() {
 		return laberinto;
