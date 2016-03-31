@@ -84,6 +84,9 @@ public class Habitacion extends Contenedor {
 	public void setForma(Forma forma) {
 		this.forma = forma;
 	}
+	public void irAlSur(EnteAutonomo enteAutonomo) {
+		forma.irAlSur(enteAutonomo);	
+	}
 	public void irAlSurEste(EnteAutonomo enteAutonomo) {
 		forma.irAlSurEste(enteAutonomo);
 	}
@@ -105,9 +108,5 @@ public class Habitacion extends Contenedor {
 	public void irAlOeste(EnteAutonomo enteAutonomo) {
 		forma.irAlOeste(enteAutonomo);	
 	}
-	public void irAlSur(EnteAutonomo enteAutonomo) {
-		forma.irAlSur(enteAutonomo);	
-	}
-	
 
 }
