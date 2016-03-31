@@ -9,7 +9,8 @@ public abstract class Estrategia {
 	void dormir(){};
 	void atacar(){};
 	void caminar(){};
-	void setBicho(Bicho bicho){
+	public Bicho getBicho(){return bicho;}
+	public void setBicho(Bicho bicho){
 		this.bicho=bicho;
 		orientaciones=bicho.posicion.getOrientaciones();
 	}

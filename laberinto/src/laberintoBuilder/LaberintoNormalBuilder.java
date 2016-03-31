@@ -17,7 +17,7 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 	public void setLaberinto(Laberinto laberinto) {
 		this.laberinto = laberinto;
 	}
-	public JuegoLaberinto getJuego() {
+	public JuegoLaberinto obtenerJuego() {
 		return juego;
 	}
 	public void setJuego(JuegoLaberinto juego) {
@@ -32,12 +32,13 @@ public class LaberintoNormalBuilder extends LaberintoBuilderAC {
 	public void construirBicho(String es, int num){
 		Bicho bicho=new Bicho();
 		Estrategia estrategia;
-		if (es=="reloj"){
+		if (es.indexOf("reloj")!=-1) {
 			estrategia=new EstrategiaSentidoReloj();
 			bicho.setEstrategia(estrategia);
 		}
 		Habitacion hab=laberinto.obtenerHabitacion(num);
 		bicho.colocarEn(hab);
+		juego.agregarBicho(bicho);
 	}
 	public void construirBomba(Contenedor con){
 		Bomba bomba=new Bomba();

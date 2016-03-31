@@ -11,10 +11,11 @@ public class OrientacionSur extends Orientacion {
 	void ponerElementoEn(Habitacion hab,ElementoMapa elto){
 		hab.setSur(elto);
 	}
-	public void entrar(EnteAutonomo bicho){
-		Habitacion hab=bicho.posicion;
-		ElementoMapa elto=hab.getSur();
-		elto.entrar();
+	public void entrar(EnteAutonomo ea){
+		//Habitacion hab=bicho.posicion;
+		//ElementoMapa elto=hab.getSur();
+		//elto.entrar();
+		ea.irAlSur();
 	}
 	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
 		forma.setSur(em);

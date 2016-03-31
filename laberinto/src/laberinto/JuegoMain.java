@@ -32,25 +32,16 @@ public class JuegoMain {
 		System.out.println("Numero de habitaciones: "+lab.getHabitaciones().size());
 		lab.listarElementos();
 		
-		hab=lab.obtenerHabitacion(1);
-		per=new Personaje();
-		//per.colocarEn(hab);
-		hab.entrar(per);
+		//hab=lab.obtenerHabitacion(1);
+		//per=new Personaje();
+		////per.colocarEn(hab);
+		//hab.entrar(per);
 		
-		ElementoMapa em= hab.getHijos().get(0);
-		em.entrar(per);
+		//ElementoMapa em= hab.getHijos().get(0);
+		//em.entrar(per);
 		//lab.listarElementos();
-		//bicho=new Bicho();
-		//bicho.colocarEn(hab);
 		
-		//bicho.setEstrategia(new EstrategiaSentidoReloj());
-		
-		//(new Thread(bicho)).start();
-		//bicho.accion();
-		//bicho.accion();
-		//bicho.accion();
-		//bicho.accion();
-		
+		juego.lanzarBichos();
 		
 	}
 

@@ -11,10 +11,11 @@ public class OrientacionOeste extends Orientacion {
 	void ponerElementoEn(Habitacion hab,ElementoMapa elto){
 		hab.setOeste(elto);
 	}
-	public void entrar(EnteAutonomo bicho){
-		Habitacion hab=bicho.posicion;
-		ElementoMapa elto=hab.getOeste();
-		elto.entrar();
+	public void entrar(EnteAutonomo ea){
+		//Habitacion hab=bicho.posicion;
+		//ElementoMapa elto=hab.getOeste();
+		//elto.entrar();
+		ea.irAlOeste();
 	}
 	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
 		forma.setOeste(em);

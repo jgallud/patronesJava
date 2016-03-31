@@ -12,10 +12,11 @@ public class OrientacionNorte extends Orientacion {
 	void ponerElementoEn(Habitacion hab,ElementoMapa elto){
 		hab.setNorte(elto);
 	}
-	public void entrar(EnteAutonomo bicho){
-		Habitacion hab=bicho.posicion;
-		ElementoMapa elto=hab.getNorte();
-		elto.entrar();
+	public void entrar(EnteAutonomo ea){
+		//Habitacion hab=bicho.posicion;
+		//ElementoMapa elto=hab.getNorte();
+		//elto.entrar();
+		ea.irAlNorte();
 	}
 	public void ponerElementoEnRectangulo(Rectangular forma, ElementoMapa em) {
 		forma.setNorte(em);

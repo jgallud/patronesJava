@@ -84,5 +84,30 @@ public class Habitacion extends Contenedor {
 	public void setForma(Forma forma) {
 		this.forma = forma;
 	}
+	public void irAlSurEste(EnteAutonomo enteAutonomo) {
+		forma.irAlSurEste(enteAutonomo);
+	}
+	public void irAlSurOeste(EnteAutonomo enteAutonomo) {
+		forma.irAlSurOeste(enteAutonomo);
+	}
+	public void irAlEste(EnteAutonomo enteAutonomo) {
+		forma.irAlEste(enteAutonomo);
+	}
+	public void irAlNorte(EnteAutonomo enteAutonomo) {
+		forma.irAlNorte(enteAutonomo);
+	}
+	public void irAlNorEste(EnteAutonomo enteAutonomo) {
+		forma.irAlNorEste(enteAutonomo);	
+	}
+	public void irAlNorOeste(EnteAutonomo enteAutonomo) {
+		forma.irAlNorOeste(enteAutonomo);
+	}
+	public void irAlOeste(EnteAutonomo enteAutonomo) {
+		forma.irAlOeste(enteAutonomo);	
+	}
+	public void irAlSur(EnteAutonomo enteAutonomo) {
+		forma.irAlSur(enteAutonomo);	
+	}
+	
 
 }
